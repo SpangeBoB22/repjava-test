@@ -1,4 +1,6 @@
-public class Teststring {
+package task2;
+
+public class task2 {
     public static void main(String args[]){
         String s1="ord";
         String s2="ord";
