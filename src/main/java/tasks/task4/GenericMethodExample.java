@@ -1,4 +1,4 @@
-package task4;
+package tasks.task4;
 
 public class GenericMethodExample {
     public static <T> void printArray(T[] arr) {
@@ -9,8 +9,7 @@ public class GenericMethodExample {
         // Alternatively, use forEach() to print out each element
         //Arrays.asList(arr).forEach(System.out::println);
     }
-
-    public static void main(String[] args) {
+    public void run() {
         Integer[] intArr = {1, 2, 3};
         String[] strArr = {"hello", "world"};
 
