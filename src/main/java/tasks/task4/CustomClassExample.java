@@ -1,9 +1,10 @@
-package task4;
+package tasks.task4;
 
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class CustomClassExample {
-    public static void main(String[] args) throws Exception {
+    public void run() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         // Create an object of a custom class
         MyCustomClass obj = new MyCustomClass();
 
@@ -20,7 +21,6 @@ public class CustomClassExample {
         System.out.println("Result of invoking method: " + result);
     }
 }
-
 class MyCustomClass {
     private String name;
 

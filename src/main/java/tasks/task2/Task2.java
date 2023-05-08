@@ -1,7 +1,7 @@
-package task2;
+package tasks.task2;
 
-public class task2 {
-    public static void main(String args[]){
+public class Task2 {
+    public void run() {
         String s1="ord";
         String s2="ord";
         System.out.println(s1.equals(s2));

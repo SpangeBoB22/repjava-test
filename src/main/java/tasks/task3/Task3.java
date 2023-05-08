@@ -1,9 +1,11 @@
-package task3;
+package tasks.task3;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
 
-public class ArrayReverse {
-    public static void main(String[] args) {
+public class Task3 {
+    public void run() {
         Scanner scanner = new Scanner(System.in);
 
         // Prompt user to enter array size
