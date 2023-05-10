@@ -1,6 +1,7 @@
 package tasks;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 public class Utils {
@@ -17,6 +18,8 @@ public class Utils {
                                         .city("Metropolis")
                                         .street("Main")
                                         .build())
+                        .interest(new HashSet<>())
+                        .projects(new HashSet<>())
                         .build()
         );
         personList.add(
@@ -30,6 +33,8 @@ public class Utils {
                                         .city("Braavos")
                                         .street("Pearl")
                                         .build())
+                        .interest(new HashSet<>())
+                        .projects(new HashSet<>())
                         .build()
         );
         personList.add(
@@ -43,6 +48,8 @@ public class Utils {
                                         .city("Blackwater")
                                         .street("Hill")
                                         .build())
+                        .interest(new HashSet<>())
+                        .projects(new HashSet<>())
                         .build()
         );
         personList.add(
@@ -56,6 +63,8 @@ public class Utils {
                                         .city("Dawnstar")
                                         .street("Hill")
                                         .build())
+                        .interest(new HashSet<>())
+                        .projects(new HashSet<>())
                         .build()
         );
         personList.add(
@@ -69,6 +78,8 @@ public class Utils {
                                         .city("Westworld")
                                         .street("Washington")
                                         .build())
+                        .interest(new HashSet<>())
+                        .projects(new HashSet<>())
                         .build()
         );
         personList.add(
@@ -82,6 +93,8 @@ public class Utils {
                                         .city("Balmora")
                                         .street("High")
                                         .build())
+                        .interest(new HashSet<>())
+                        .projects(new HashSet<>())
                         .build()
         );
         personList.add(
@@ -95,6 +108,8 @@ public class Utils {
                                         .city("King's Landing")
                                         .street("Hill")
                                         .build())
+                        .interest(new HashSet<>())
+                        .projects(new HashSet<>())
                         .build()
         );
         personList.add(
@@ -108,6 +123,8 @@ public class Utils {
                                         .city("Gotham")
                                         .street("Maple")
                                         .build())
+                        .interest(new HashSet<>())
+                        .projects(new HashSet<>())
                         .build()
         );
         personList.add(
@@ -121,6 +138,8 @@ public class Utils {
                                         .city("Winterfell")
                                         .street("Main")
                                         .build())
+                        .interest(new HashSet<>())
+                        .projects(new HashSet<>())
                         .build()
         );
         personList.add(
@@ -134,6 +153,8 @@ public class Utils {
                                         .city("Eerie")
                                         .street("Lake")
                                         .build())
+                        .interest(new HashSet<>())
+                        .projects(new HashSet<>())
                         .build()
         );
         return personList;
