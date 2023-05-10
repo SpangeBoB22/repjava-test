@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <parameter name="test-name"  value="test"/>
+    <test verbose="2" preserve-order="true" name="/home/andrey/Programing/Freelance/Java/tasks/tasks/tasks/src/test/java/tasks/task8/ItemTest.java">
+        <classes>
+            <class name="tasks.task8.ItemTest">
+                <methods><include name="valid_equals"/>
+                    <include name="error_equals"/>
+                    <include name="valid_compareTo"/>
+                    <include name="error_compareTo"/>
+                    <include name="test_load_parameter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

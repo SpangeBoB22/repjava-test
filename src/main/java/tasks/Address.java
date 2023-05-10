@@ -21,7 +21,7 @@ public class Address implements Serializable {
     @Serial
     private static final long serialVersionUID = 2L;
     @Id
-
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
     @Column(name = "street")

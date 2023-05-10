@@ -32,7 +32,7 @@ CREATE TABLE `person` (
   PRIMARY KEY (`id`),
   KEY `address_id` (`address_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-*/
+ */
 public class Task6 {
     public void run() {
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("persistence");
@@ -41,6 +41,7 @@ public class Task6 {
 
         entityManager.getTransaction().begin();
         Person person = Utils.persons().get(0);
+        System.out.println(person);
         entityManager.persist(person);
         entityManager.getTransaction().commit();
 
@@ -48,6 +49,7 @@ public class Task6 {
 
         entityManager.getTransaction().begin();
         person = Utils.persons().get(1);
+        System.out.println(person);
         entityManager.persist(person);
         entityManager.getTransaction().commit();
 

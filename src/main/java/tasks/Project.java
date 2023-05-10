@@ -4,8 +4,9 @@ import jakarta.persistence.*;
 import lombok.*;
 import lombok.extern.jackson.Jacksonized;
 
+import java.util.HashSet;
+import java.util.Set;
 
-@EqualsAndHashCode
 @Getter
 @Setter
 @ToString
@@ -14,12 +15,16 @@ import lombok.extern.jackson.Jacksonized;
 @NoArgsConstructor
 @Jacksonized
 @Entity
-@Table(name = "interest")
-public class Interest {
+@Table(name = "project")
+public class Project {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
     @Column(name = "name")
     private String name;
+
+    @ManyToMany(mappedBy = "projects")
+    @ToString.Exclude
+    private Set<Person> persons = new HashSet<>();
 }

@@ -8,6 +8,8 @@
         <description>Hibernate Entity Manager Example</description>
         <class>tasks.Person</class>
         <class>tasks.Address</class>
+        <class>tasks.Interest</class>
+        <class>tasks.Project</class>
 
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
