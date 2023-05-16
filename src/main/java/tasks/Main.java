@@ -1,6 +1,8 @@
 package tasks;
 
 import tasks.task10.Task10;
+import tasks.task11.Task11;
+import tasks.task12.Task12;
 import tasks.task2.Task2;
 import tasks.task3.Task3;
 import tasks.task4.Task4;
@@ -16,7 +18,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException, InterruptedException, InvocationTargetException, NoSuchMethodException, IllegalAccessException {
 
-        System.out.println("Task2");
+       /* System.out.println("Task2");
         Task2 task2 = new Task2();
         task2.run();
 
@@ -50,6 +52,12 @@ public class Main {
         System.out.println("Task10");
         Task10 task10 = new Task10();
         task10.run();
+
+        System.out.println("Task11");
+        Task11 task11 = new Task11();
+        task11.run();*/
+        Task12 task12 = new Task12();
+        task12.run();
     }
 
 }
