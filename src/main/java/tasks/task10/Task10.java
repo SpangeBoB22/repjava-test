@@ -1,13 +1,11 @@
 package tasks.task10;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import tasks.Utils;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -15,7 +13,12 @@ import java.time.Duration;
 public class Task10 implements AutoCloseable {
     WebDriver driver = null;
     WebElement modal = null;
-    Actions action = new Actions(getDriver());
+    Actions action = null;
+
+    public Task10() {
+        driver = Utils.getDriver();
+        action = new Actions(driver);
+    }
     public void run() {
         WebElement label = getLabel();
         action.moveToElement(label).perform();
@@ -70,9 +73,6 @@ public class Task10 implements AutoCloseable {
                 .findElement(By.xpath(".//button[contains(text(),'" + text + "')]"));
     }
     private WebElement getModal() {
-        if(driver == null) {
-            driver = getDriver();
-        }
         driver.get("https://www.demoblaze.com/");
         waitScripts(driver);
         System.out.println("Clicking launch modal button");
@@ -81,22 +81,6 @@ public class Task10 implements AutoCloseable {
                 .until(ExpectedConditions.elementToBeClickable(By.xpath(".//button[contains(text(),'Sign up')]")));
         System.out.println(firstResult.getText());
         return driver.findElement(By.id("signInModal"));
-    }
-    private WebDriver getDriver() {
-        WebDriverManager.chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
-        options.setHeadless(true);
-        options.addArguments("--disable-extensions");
-        options.addArguments("--disable-gpu");
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--window-size=1920x1080");
-        options.addArguments("--remote-allow-origins=*");
-
-        driver = new ChromeDriver(options);
-        Dimension dm = new Dimension(1552, 849);
-        driver.manage().window().setSize(dm);
-        return driver;
     }
     private void waitScripts(WebDriver driver) {
         new WebDriverWait(driver, Duration.ofSeconds(10), Duration.ofSeconds(500)).until((ExpectedCondition<Boolean>) webDriver -> ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete"));
